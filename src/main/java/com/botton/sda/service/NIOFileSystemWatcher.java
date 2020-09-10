@@ -1,8 +1,6 @@
 package com.botton.sda.service;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
@@ -27,8 +25,8 @@ public class NIOFileSystemWatcher {
         watchService.close();
     }
 	
-	private void watchEvents(WatchService watchService)
-			throws InterruptedException, UnsupportedEncodingException, FileNotFoundException, IOException {
+	private void watchEvents(WatchService watchService) throws InterruptedException, IOException 
+			 {
 		WatchKey key;
 		Reader reader = new Reader();
 		Parser parser = new Parser();

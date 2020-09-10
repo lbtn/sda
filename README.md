@@ -1,4 +1,4 @@
-# NTConsult - Sales Data Analysis
+#Sales Data Analysis Chalenge
 
 NTConsult challenge solution proposal.
 

@@ -29,7 +29,7 @@ public class Sale extends ParserLineDTO {
 	}
 	
 	//TODO: probably can be way better
-	private ArrayList<Item> itensParser(String itemsLineDTO){
+	public ArrayList<Item> itensParser(String itemsLineDTO){
 		ArrayList<Item> myItems = new ArrayList<Item>();
 		itemsLineDTO = itemsLineDTO.replace("[","").replace("]","");
 		String[] itemsNotSeparated = itemsLineDTO.split(",");
