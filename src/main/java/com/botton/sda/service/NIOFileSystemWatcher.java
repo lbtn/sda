@@ -1,7 +1,6 @@
 package com.botton.sda.service;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,7 +14,7 @@ import com.botton.sda.util.CustomResources;
 
 public class NIOFileSystemWatcher {
 	
-	public void watcher() throws IOException, InterruptedException, URISyntaxException {
+	public void watcher() throws IOException, InterruptedException {
         WatchService watchService = FileSystems.getDefault().newWatchService();
         Path path = Paths.get(CustomResources.IN_FOLDER);
         path.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
@@ -25,8 +24,7 @@ public class NIOFileSystemWatcher {
         watchService.close();
     }
 	
-	private void watchEvents(WatchService watchService) throws InterruptedException, IOException 
-			 {
+	private void watchEvents(WatchService watchService) throws InterruptedException, IOException {
 		WatchKey key;
 		Reader reader = new Reader();
 		Parser parser = new Parser();
