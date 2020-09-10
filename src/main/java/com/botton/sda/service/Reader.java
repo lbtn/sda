@@ -26,6 +26,7 @@ public class Reader {
 	public void extractLine(WatchEvent<?> event, Parser parser, EntityFactory ef) throws IOException {
 		BufferedReader reader = new BufferedReader(
 				new InputStreamReader(new FileInputStream(CustomResources.IN_FOLDER + event.context()), "UTF-8"));
+				//new InputStreamReader(new FileInputStream(CustomResources.IN_FOLDER + event.context())));
 		
 		String currentLine = reader.readLine();
 		
