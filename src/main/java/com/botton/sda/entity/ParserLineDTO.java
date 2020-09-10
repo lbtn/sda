@@ -2,24 +2,40 @@ package com.botton.sda.entity;
 
 import java.util.Arrays;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Setter
-@Getter
-@NoArgsConstructor
 //DTO: Data Transfer Object
 //used in this case to garantee in memory data as soon as possible
 public class ParserLineDTO {
 
 	private int type;
 	private String[] content;
-	
+
 	public ParserLineDTO(String line) {
+		System.out.println(line);
 		String type = line.substring(0, 3);
 		this.type = Integer.parseInt(type);
 		this.content = line.split("ç");
+		if(this.content.length>4 && this.type == 3) {
+			this.content[4] = this.content[4]+this.content[5]; 
+		}
+	}
+
+	public ParserLineDTO() {
+	}
+
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
+	}
+
+	public String[] getContent() {
+		return content;
+	}
+
+	public void setContent(String[] content) {
+		this.content = content;
 	}
 
 	@Override
@@ -46,7 +62,5 @@ public class ParserLineDTO {
 			return false;
 		return true;
 	}
-	
-	
-	
+
 }

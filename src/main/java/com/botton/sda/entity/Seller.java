@@ -1,14 +1,7 @@
 package com.botton.sda.entity;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Setter
-@Getter
-@NoArgsConstructor
 public class Seller extends ParserLineDTO {
-	
+
 	private String cpf;
 	private String name;
 	private double salary;
@@ -19,6 +12,38 @@ public class Seller extends ParserLineDTO {
 		this.cpf = p.getContent()[1];
 		this.name = p.getContent()[2];
 		this.salary = Double.parseDouble(p.getContent()[3]);
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
 	}
 
 	@Override
@@ -45,6 +70,5 @@ public class Seller extends ParserLineDTO {
 			return false;
 		return true;
 	}
-	
-	
+
 }

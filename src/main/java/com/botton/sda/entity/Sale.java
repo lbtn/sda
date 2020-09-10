@@ -2,13 +2,6 @@ package com.botton.sda.entity;
 
 import java.util.ArrayList;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Setter
-@Getter
-@NoArgsConstructor
 public class Sale extends ParserLineDTO {
 	
 	private String saleId;
@@ -28,7 +21,6 @@ public class Sale extends ParserLineDTO {
 		
 	}
 	
-	//TODO: probably can be way better
 	public ArrayList<Item> itensParser(String itemsLineDTO){
 		ArrayList<Item> myItems = new ArrayList<Item>();
 		itemsLineDTO = itemsLineDTO.replace("[","").replace("]","");
@@ -48,9 +40,50 @@ public class Sale extends ParserLineDTO {
 		}
 		return sum;
 	}
+	
+	public Sale() {
+		
+	}
+	
+	public Sale(String line) {
+		super(line);
+	}
+
+	public String getSaleId() {
+		return saleId;
+	}
+
+	public void setSaleId(String saleId) {
+		this.saleId = saleId;
+	}
+
+	public String getItemsLineDTO() {
+		return itemsLineDTO;
+	}
+
+	public void setItemsLineDTO(String itemsLineDTO) {
+		this.itemsLineDTO = itemsLineDTO;
+	}
+
+	public ArrayList<Item> getItens() {
+		return itens;
+	}
+
+	public void setItens(ArrayList<Item> itens) {
+		this.itens = itens;
+	}
+
+	public String getSalesmanName() {
+		return salesmanName;
+	}
+
+	public void setSalesmanName(String salesmanName) {
+		this.salesmanName = salesmanName;
+	}
 
 	//overriding hashCode and equals to use HashSet for unique objects
 	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

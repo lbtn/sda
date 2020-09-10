@@ -1,15 +1,28 @@
 #Sales Data Analysis Chalenge
 
-NTConsult challenge solution proposal.
+Plataforma que realiza a análise de dados provenientes de um diretório especificado, gerando um relatório final.
 
-## Features
+## Dependências
 
-OO, NIO Folder Watcher, Big files ready, JUnit Testing.
+- Java Development Kit (versão 8)
+- Maven (versão 3.3 ou maior)
 
-## Running
+## Instalando a aplicação
+
+Execute o comando para clonar o projeto:
 
 ```bash
-java -jar data-analysis.jar
+git clone https://github.com/lbotton/sda
+```
+
+Execute 
+
+```bash
+mvn install
+```
+
+```bash
+mvn exec:java
 ```
 
 ## Usage
