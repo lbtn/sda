@@ -14,25 +14,28 @@ Execute o comando para clonar o projeto:
 ```bash
 git clone https://github.com/lbotton/sda
 ```
+Acesse a pasta do projeto copiado por linha de comando;
 
-Execute 
+Execute o comando para instalar o projeto
 
 ```bash
 mvn install
 ```
 
+Inicie a aplicação com o comando (não executa os testes)
+
 ```bash
 mvn exec:java
 ```
 
-## Usage
+Após a inicialização insira o arquivo in.txt no seu diretório /Users/data/in.
+Verifique o resultado gerado no diretório /Users/data/out.
 
-Find your /Users (HOMEPATH) folder and make a /Users/data/in and a /Users/data/out folders.
-Copy in.txt file to /Users/data/in and check result at /Users/data/out.
+O diretório /Users é o HOMEPATH do seu sistema operacional.
 
-## Future Versions
+## Overview
 
-Maven, Factory Pattern implementation, UTF-8 issue.
+O projeto utiliza Maven como gestor de dependências, NIO para monitoramento do sistema de arquivos e JUnit para testes.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
