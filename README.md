@@ -16,6 +16,12 @@ git clone https://github.com/lbotton/sda
 ```
 Acesse a pasta do projeto copiado por linha de comando;
 
+Compile a aplicação
+
+```bash
+mvn clean install
+```
+
 Inicie a aplicação com o comando (não executa os testes)
 
 ```bash
