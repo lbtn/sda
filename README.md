@@ -1,4 +1,4 @@
-#Sales Data Analysis Chalenge
+## Sales Data Analysis Chalenge
 
 Plataforma que realiza a análise de dados provenientes de um diretório especificado, gerando um relatório final.
 
