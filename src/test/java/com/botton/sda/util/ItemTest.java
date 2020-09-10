@@ -1,4 +1,4 @@
-package com.botton.sda.test;
+package com.botton.sda.util;
 
 import static org.junit.Assert.assertEquals;
 
