@@ -16,12 +16,6 @@ git clone https://github.com/lbotton/sda
 ```
 Acesse a pasta do projeto copiado por linha de comando;
 
-Execute o comando para instalar o projeto
-
-```bash
-mvn install
-```
-
 Inicie a aplicação com o comando (não executa os testes)
 
 ```bash

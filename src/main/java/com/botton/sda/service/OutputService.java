@@ -8,9 +8,9 @@ import com.botton.sda.util.CustomResources;
 
 public class OutputService {
 	
-	private AnalysisModule am;
+	private AnalysisService am;
 
-	public OutputService(AnalysisModule am) {
+	public OutputService(AnalysisService am) {
 		this.am = am;
 	}
 	
